@@ -1,0 +1,297 @@
+:root {
+  --color-primay: #0073ff;
+  --color-white: #e9e9e9;
+  --color-black-1: #0b3d77;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: url("login-image.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  color: var(--color-white);
+  overflow: hidden;
+}
+
+.menu-bar {
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: var(--color-black-1);
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  position: fixed;
+  z-index: 999;
+  top: 0px;
+}
+
+.logo {
+  color: var(--color-primay);
+  font-size: 30px;
+}
+
+.menu-bar ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu-bar ul li {
+  padding: 10px 30px;
+  position: relative;
+}
+
+.menu-bar ul li a {
+  color: var(--color-primay);
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+
+.cikis-btn {
+  color: var(--color-primay);
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 0.3s;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.menu-bar ul li a:hover {
+  color: var(--color-black-1);
+}
+
+.profil img {
+  height: 25px;
+  margin: 8px 0 0 10px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+}
+
+.menu-bar ul li:hover .dropdown-menu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  background-color: transparent;
+}
+
+.dropdown-menu ul {
+  display: block;
+  margin: 10px;
+}
+
+.dropdown-menu ul li {
+  width: 230px;
+  padding: 10px;
+}
+
+.container {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  margin: 200px 0 0 30px;
+}
+
+.title {
+  font-size: 70px;
+}
+
+.search {
+  background: gray;
+  border-radius: 25px;
+  position: relative;
+  margin-right: 60px;
+}
+
+.input-search {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 25px;
+  font-size: 20px;
+  padding: 8px 40px 8px 20px;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.search-btn {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 14px;
+}
+
+.add-book {
+  width: 100px;
+  height: 30px;
+  background: var(--color-white);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: auto;
+  margin-right: 200px;
+}
+
+.add-book a {
+  text-decoration: none;
+  color: var(--color-primay);
+}
+
+.add-book a:hover {
+  font-weight: bold;
+  color: var(--color-black-1);
+}
+
+::selection {
+  color: darkseagreen;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  .menu-bar ul li {
+    padding: 10px 20px;
+  }
+
+  .title {
+    font-size: 60px;
+  }
+
+  .search {
+    margin-right: 30px;
+  }
+
+  .add-book {
+    margin-right: 100px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .menu-bar ul {
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    transition: all 0.5s ease;
+  }
+
+  .menu-bar ul.active {
+    left: 0;
+  }
+
+  .menu-bar ul li {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .menu-bar ul li a {
+    font-size: 18px;
+  }
+
+  .logo {
+    font-size: 25px;
+  }
+
+  .title {
+    font-size: 50px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .add-book {
+    margin-right: 50px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 40px;
+  }
+
+  .search {
+    margin-right: 20px;
+  }
+
+  .add-book {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .menu-bar {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .menu-bar ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .menu-bar ul li {
+    padding: 10px 0;
+  }
+
+  .container {
+    margin: 100px 0 0 20px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .search {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .input-search {
+    font-size: 16px;
+  }
+
+  .search-btn {
+    width: 40px;
+    font-size: 12px;
+  }
+
+  .add-book {
+    width: 80px;
+    height: 25px;
+    font-size: 14px;
+    margin-right: 0;
+  }
+}

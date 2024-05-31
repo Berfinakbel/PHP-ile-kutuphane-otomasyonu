@@ -1,0 +1,77 @@
+div.table {
+  height: 65%;
+  border: none;
+  border-color: transparent;
+  width: 86%;
+  margin: auto;
+  max-height: 450px; /* Tablonun maksimum yüksekliği */
+  overflow-y: auto; /* Dikey scrollbar'ı otomatik olarak göster */
+}
+
+/* Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px; /* Scrollbar genişliği */
+}
+
+::-webkit-scrollbar-track {
+  background: #212b38; /* Scrollbar izleme arka plan rengi */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #081a30; /* Scrollbar rengi */
+  border-radius: 6px;
+}
+
+table {
+  background: transparent;
+  backdrop-filter: blur(5px);
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-collapse: collapse;
+  border-color: transparent;
+}
+
+tr {
+  padding: 15px;
+}
+
+tr:first-child {
+  background: #0073ff;
+  color: #e9e9e9;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+}
+
+tr:hover {
+  background: #0b3d77;
+}
+
+td {
+  height: 50px;
+  vertical-align: bottom;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 15px;
+  border: none;
+}
+
+.tbl-btn {
+  width: 80px;
+  height: 35px;
+  margin-bottom: -8px;
+  color: #e9e9e9;
+  border: none;
+  background: #0073ff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+td a {
+  text-decoration: none;
+  color: #e9e9e9;
+}
+
+

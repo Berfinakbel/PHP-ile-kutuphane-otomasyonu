@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("login-image.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 30px;
+}
+
+h1 {
+  width: 400px;
+  margin: auto;
+  font-size: 50px;
+  text-align: center;
+  color: #faf9f6;
+}
+
+.main {
+  background: transparent;
+  backdrop-filter: blur(5px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+.main-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px 0 8px 0;
+}
+
+.input-box {
+  width: calc(100% / 2 - 15px);
+  margin: 15px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #faf9f6;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  padding: 0 17px 0 17px;
+  font-size: 16px;
+  transition: all 0.4s ease;
+}
+
+.text {
+  display: block;
+  margin-bottom: 8px;
+  color: #faf9f6;
+  font-weight: 500;
+}
+
+input:focus,
+input:valid {
+  border-color: #faf9f6;
+}
+
+.btn {
+  height: 50px;
+  margin: 20px 0;
+}
+
+.btn input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #faf9f6;
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+
+.btn input:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 40px;
+    width: 100%;
+  }
+  
+  .main {
+    padding: 20px 30px;
+  }
+
+  .input-box {
+    width: calc(50% - 10px);
+  }
+
+  .input-box input {
+    height: 35px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 35px;
+  }
+
+  .main {
+    padding: 20px;
+  }
+
+  .input-box {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .main {
+    padding: 15px;
+  }
+
+  .input-box {
+    width: 100%;
+  }
+
+  .input-box input {
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .btn {
+    height: 45px;
+  }
+
+  .btn input {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  .main {
+    padding: 10px;
+  }
+
+  .input-box input {
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .btn {
+    height: 40px;
+  }
+
+  .btn input {
+    font-size: 16px;
+  }
+}
